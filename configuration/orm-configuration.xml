@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<orm-configuration xmlns="http://www.example.org/DSTAX-ORM-CONFIGURATION" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.example.org/DSTAX-ORM-CONFIGURATION orm-configuration.xsd ">
+	<session-factory scan-path="com.flights.app.model.*">
+	 	<property name="orm.connection.driver_class" value="" />
+		<property name="orm.connection.url" value=""/>
+		<property name="orm.connection.username" value=""/>
+		<property name="orm.connection.password" value=""/>
+		<property name="show_sql" value="true"/>
+		<strategy attributeType="java.sql.Timestamp" mode="db">
+      		<action>
+        		<value>SELECT ${hint} FROM DUMMY</value>
+      		</action>
+    	</strategy>
+		<strategy attributeType="java.lang.Integer" mode="db">
+      		<action>
+        		<value>SELECT ${hint} FROM DUMMY</value>
+      		</action>
+    	</strategy>
+	</session-factory>
+</orm-configuration>
